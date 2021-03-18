@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>第一章 深度强化学习概述</title>
+    <url>/2021/03/17/%E7%AC%AC%E4%B8%80%E7%AB%A0-%E6%B7%B1%E5%BA%A6%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E6%A6%82%E8%BF%B0/</url>
+    <content><![CDATA[<img src="/2021/03/17/%E7%AC%AC%E4%B8%80%E7%AB%A0-%E6%B7%B1%E5%BA%A6%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E6%A6%82%E8%BF%B0/%E6%B7%B1%E5%BA%A6%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0.png" class title="思维导图">]]></content>
+      <categories>
+        <category>深度强化学习</category>
+      </categories>
+      <tags>
+        <tag>第一章 深度强化学习概述</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>对似然性的理解</title>
+    <url>/2021/03/17/%E5%AF%B9%E4%BC%BC%E7%84%B6%E6%80%A7%E7%9A%84%E7%90%86%E8%A7%A3/</url>
+    <content><![CDATA[<p><strong>似然性与概率</strong></p>
+<p>例子：机器学习中已知随机变量D表示数据，随机变量$\theta$表示模型参数。</p>
+<p>先验概率$P(\theta)$：已知模型参数$\theta$，也称统计概率。</p>
+<p>似然函数$P(D|\theta)$：已知在模型参数$\theta$的条件下，数据为D的概率。</p>
+<p>后验概率$P(\theta|D)$：已知数据结果为D，求导致该结果的参数$\theta$，也称条件概率。</p>
+<p>贝叶斯公式：即三者关系<br>$$<br>P\left( \theta \mid D \right) =\frac{P\left( \theta \right) \cdot P\left( D\mid \theta \right)}{P\left( D \right)}<br>$$<br>预测时，计算数据对后验概率分布的期望值<br>$$<br>P\left( x \mid D \right) =\int{P\left( x \mid \theta ,D \right) P\left( \theta \mid D \right) d\theta}<br>$$<br><strong>极大似然估计与贝叶斯（极大后验）估计</strong></p>
+<p>极大似然估计（ML）：估计模型的参数，目的是找出一组参数$\theta$，使得模型产生出观测数据D的概率最大。<br>$$<br>\hat{\theta}=arg\max_{\theta} P(D|\theta)<br>$$<br>贝叶斯估计：<br>$$<br>\hat{P}\left( \theta \mid D \right) =\frac{P\left( \theta \right) \cdot P\left( D\mid \theta \right)}{P\left( D \right)}<br>$$<br>实际应用中可以把两者联系起来，假设先验分布式均匀分布，取后验概率最大，就能从贝叶斯估计中得到极大似然估计。</p>
+<hr>
+]]></content>
+      <categories>
+        <category>统计学习方法</category>
+      </categories>
+      <tags>
+        <tag>第一章 统计学习及监督学习概率</tag>
+      </tags>
+  </entry>
+</search>
