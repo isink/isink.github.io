@@ -20,28 +20,36 @@
     var CONFIG = {"hostname":"worldpeace.monster","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":"enable","trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="冬企鹅">
-<meta property="og:url" content="http://worldpeace.monster/index.html">
+  <meta name="description" content="方法一：暴力枚举 双循环，首先i指向数组中第一个数，然后下个循环中依次寻找i之后的数，若$nums[i]+num[j]&#x3D;target$输出$i$和$j$。循环结束则输出空表。 12345678class Solution:    def twoSum(self, nums: List[int], target: int) -&gt; list[int]:        n &#x3D; len(nums)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="1.两数之和">
+<meta property="og:url" content="http://worldpeace.monster/2021/03/20/%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/index.html">
 <meta property="og:site_name" content="冬企鹅">
+<meta property="og:description" content="方法一：暴力枚举 双循环，首先i指向数组中第一个数，然后下个循环中依次寻找i之后的数，若$nums[i]+num[j]&#x3D;target$输出$i$和$j$。循环结束则输出空表。 12345678class Solution:    def twoSum(self, nums: List[int], target: int) -&gt; list[int]:        n &#x3D; len(nums)">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://worldpeace.monster/2021/03/20/%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C.png">
+<meta property="og:image" content="http://worldpeace.monster/2021/03/20/%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/%E6%96%B9%E6%B3%95%E4%BA%8C%E5%93%88%E5%B8%8C%E8%A1%A8.png">
+<meta property="article:published_time" content="2021-03-20T11:39:58.000Z">
+<meta property="article:modified_time" content="2021-03-20T13:47:07.773Z">
 <meta property="article:author" content="ink">
+<meta property="article:tag" content="array">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://worldpeace.monster/2021/03/20/%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C.png">
 
-<link rel="canonical" href="http://worldpeace.monster/">
+<link rel="canonical" href="http://worldpeace.monster/2021/03/20/%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>冬企鹅</title>
+  <title>1.两数之和 | 冬企鹅</title>
   
 
 
@@ -162,9 +170,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
@@ -180,10 +189,9 @@
       <meta itemprop="name" content="冬企鹅">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/03/20/%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/" class="post-title-link" itemprop="url">1.两数之和</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          1.两数之和
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -230,7 +238,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <img src="/2021/03/20/%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C.png" class title="两数之和">
+        <img src="/2021/03/20/%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C.png" class title="两数之和">
 <p><strong>方法一：暴力枚举</strong></p>
 <p>双循环，首先i指向数组中第一个数，然后下个循环中依次寻找i之后的数，若$nums[i]+num[j]=target$输出$i$和$j$。循环结束则输出空表。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">twoSum</span>(<span class="params">self, nums: List[<span class="built_in">int</span>], target: <span class="built_in">int</span></span>) -&gt; list[int]:</span></span><br><span class="line">        n = <span class="built_in">len</span>(nums)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(i+<span class="number">1</span>, n):</span><br><span class="line">                <span class="keyword">if</span> nums[i] + nums[j] == target:</span><br><span class="line">                    <span class="keyword">return</span> [i, j]</span><br><span class="line">        <span class="keyword">return</span> []</span><br></pre></td></tr></table></figure>
@@ -251,334 +259,67 @@
 <p>操作方法</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">Dict = &#123;<span class="string">&#x27;a&#x27;</span>:<span class="number">1</span>,<span class="string">&#x27;b&#x27;</span>:<span class="number">2</span>,<span class="string">&#x27;c&#x27;</span>:<span class="number">3</span>,<span class="string">&#x27;d&#x27;</span>:<span class="number">4</span>&#125;</span><br><span class="line"></span><br><span class="line">Dict.has_key(key)  判断一个字典是否有某个key</span><br><span class="line">&gt;&gt;&gt;Dict.has_key(<span class="string">&#x27;b&#x27;</span>)</span><br><span class="line"><span class="literal">True</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>Dict.has_key(<span class="string">&#x27;e&#x27;</span>)</span><br><span class="line"><span class="literal">False</span></span><br><span class="line"></span><br><span class="line">Dict.keys()  获得一个字典所有的key，存入一个<span class="built_in">list</span>中</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>Dict.keys()</span><br><span class="line">[<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;b&#x27;</span>,<span class="string">&#x27;c&#x27;</span>,<span class="string">&#x27;d&#x27;</span>]</span><br><span class="line"></span><br><span class="line">Dict.values() 获得一个字典所有的value，存入一个<span class="built_in">list</span>中</span><br><span class="line">&gt;&gt;&gt;Dict.keys()</span><br><span class="line">[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line"></span><br><span class="line">Dict.copy()  将一个Dict拷贝给另一个Dict，而不是传索引</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>Dict_1 = Dict.copy()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>Dict_1[<span class="string">&#x27;a&#x27;</span>] = <span class="number">0</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>Dict_1,Dict</span><br><span class="line">&#123;<span class="string">&#x27;a&#x27;</span>:<span class="number">0</span>,<span class="string">&#x27;b&#x27;</span>:<span class="number">2</span>,<span class="string">&#x27;c&#x27;</span>:<span class="number">3</span>,<span class="string">&#x27;d&#x27;</span>:<span class="number">4</span>&#125;,&#123;<span class="string">&#x27;a&#x27;</span>:<span class="number">1</span>,<span class="string">&#x27;b&#x27;</span>:<span class="number">2</span>,<span class="string">&#x27;c&#x27;</span>:<span class="number">3</span>,<span class="string">&#x27;d&#x27;</span>:<span class="number">4</span>&#125;</span><br><span class="line">如果是Dict_1 = Dict 那么任意<span class="built_in">dict</span>改变之后，另外一个也会改变，=号赋值是引用传递</span><br><span class="line"></span><br><span class="line">Dict.get(key, default) 获得指定key的值，如果没有值，返回default值</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>Dict.get(<span class="string">&#x27;a&#x27;</span>)</span><br><span class="line"><span class="number">0</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>Dict.get(<span class="string">&#x27;e&#x27;</span>,<span class="number">100</span>)</span><br><span class="line"><span class="number">100</span></span><br><span class="line"></span><br><span class="line">Dict.update(Dict_1) 遍历Dict_1来更新Dict</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>Dict_1 = Dict.copy()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>Dict_1[<span class="string">&quot;e&quot;</span>] = <span class="number">100</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>Dict_1[<span class="string">&quot;a&quot;</span>] = -<span class="number">1</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>Dict,Dict_1</span><br><span class="line">&#123;<span class="string">&#x27;a&#x27;</span>:<span class="number">1</span>,<span class="string">&#x27;b&#x27;</span>:<span class="number">2</span>,<span class="string">&#x27;c&#x27;</span>:<span class="number">3</span>,<span class="string">&#x27;d&#x27;</span>:<span class="number">4</span>&#125;,&#123;<span class="string">&#x27;a&#x27;</span>:-<span class="number">1</span>,<span class="string">&#x27;b&#x27;</span>:<span class="number">2</span>,<span class="string">&#x27;c&#x27;</span>:<span class="number">3</span>,<span class="string">&#x27;d&#x27;</span>:<span class="number">4</span>,<span class="string">&#x27;e&#x27;</span>:<span class="number">100</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>Dict.update(Dict_1)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>Dict</span><br><span class="line">&#123;<span class="string">&#x27;a&#x27;</span>:-<span class="number">1</span>,<span class="string">&#x27;b&#x27;</span>:<span class="number">2</span>,<span class="string">&#x27;c&#x27;</span>:<span class="number">3</span>,<span class="string">&#x27;d&#x27;</span>:<span class="number">4</span>,<span class="string">&#x27;e&#x27;</span>:<span class="number">100</span>&#125;</span><br><span class="line"></span><br><span class="line">Dict.pop(key)  取出一个key，并从<span class="built_in">dict</span>中移除他</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>Dict.pop(<span class="string">&#x27;a&#x27;</span>)</span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>Dict</span><br><span class="line">&#123;<span class="string">&#x27;b&#x27;</span>:<span class="number">2</span>,<span class="string">&#x27;c&#x27;</span>:<span class="number">3</span>,<span class="string">&#x27;d&#x27;</span>:<span class="number">4</span>&#125;</span><br><span class="line"></span><br><span class="line">Dict.clear()  清空字典</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>Dict.clear()</span><br><span class="line">&#123;&#125;</span><br><span class="line"></span><br><span class="line">Dict.items()  把<span class="built_in">dict</span>变为可遍历的元组数组</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>Dict.items()</span><br><span class="line">[(<span class="string">&#x27;a&#x27;</span>,<span class="number">1</span>),(<span class="string">&#x27;b&#x27;</span>,<span class="number">2</span>),(<span class="string">&#x27;c&#x27;</span>,<span class="number">3</span>),(<span class="string">&#x27;d&#x27;</span>,<span class="number">4</span>)]</span><br></pre></td></tr></table></figure>
 
-      
     </div>
 
     
     
     
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Author
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://worldpeace.monster/2021/03/20/%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/" title="1.两数之和">http://worldpeace.monster/2021/03/20/两数之和/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <div>
+        
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+        
+      </div>
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
+          <div class="post-tags">
+              <a href="/tags/array/" rel="tag"># array</a>
+          </div>
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://worldpeace.monster/2021/03/19/%E8%B4%9D%E5%B0%94%E6%9B%BC%E7%AD%89%E5%BC%8F/">
+        
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/avatar.png">
-      <meta itemprop="name" content="Author">
-      <meta itemprop="description" content="">
-    </span>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="冬企鹅">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/03/19/%E8%B4%9D%E5%B0%94%E6%9B%BC%E7%AD%89%E5%BC%8F/" class="post-title-link" itemprop="url">贝尔曼等式</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-03-19 17:16:45" itemprop="dateCreated datePublished" datetime="2021-03-19T17:16:45+08:00">2021-03-19</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-03-20 16:37:56" itemprop="dateModified" datetime="2021-03-20T16:37:56+08:00">2021-03-20</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">深度强化学习</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2021/03/19/%E8%B4%9D%E5%B0%94%E6%9B%BC%E7%AD%89%E5%BC%8F/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2021/03/19/%E8%B4%9D%E5%B0%94%E6%9B%BC%E7%AD%89%E5%BC%8F/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><strong>Markov Reward Process</strong></p>
-<p><strong>Return（回报）</strong>：把奖励进行折扣后所获得的收益。Return 可以定义为奖励的逐步叠加：</p>
-<script type="math/tex; mode=display">
-G_t=R_{t+1}+\gamma R_{t+2}+\gamma^2R_{t+3}+\gamma^3R_{t+4}...</script><p><strong>状态价值函数（state value function）</strong>:Return的期望：</p>
-<script type="math/tex; mode=display">
-V_t(s)=E[G_t\mid s_t=s]=E[R_{t+1}+\gamma R_{t+2}+\gamma^2R_{t+3}+\gamma^3R_{t+4}...\mid s_t=s]</script><p>所以这个期望也可以看成是对未来可能获得奖励的当前价值的一个表现，就是当你进入某一个状态过后，你现在就有多大的价值。</p>
-<p><strong>贝尔曼等式（Bellman Equation）</strong>：定义了当前状态跟未来状态之间的关系。</p>
-<p>由简单的数学推到可以得到：</p>
-<script type="math/tex; mode=display">
-G_t=R_{t+1}+\gamma(R_{t+2}+\gamma R_{t+3}+\gamma^2 R_{t+4}+...)</script><script type="math/tex; mode=display">
-迭代：G_t=R_{t+1}+\gamma G_{t+1}</script><p>则贝尔曼等式推到如下：</p>
-<script type="math/tex; mode=display">
-V(s)=E[G_t\mid s_t=t]\\
-=E[R_{t+1}+\gamma R_{t+2}+\gamma^2R_{t+3}+\gamma^3R_{t+4}...\mid s_t=s]\\
-=E[R_{t+1}\mid s_t=s]+\gamma E[R_{t+2}+\gamma R_{t+3}+\gamma^2 R_{t+4}+...\mid s_t=s]\\
-=E[R_{t+1}+\gamma G_{t+1}\mid s_t=s]\\
-=E[R_{t+1}+\gamma\cdot V(s_{t+1})\mid s_t=s]\\
-=R(s)+\gamma \sum_{s^,\subseteq S}P(s^,\mid s)V(s^,)</script><p>Bellman Equation 就是当前状态与未来状态的迭代关系，表示当前状态的值函数可以通过下个状态的值函数来计算。</p>
-<p>假设当前的状态是考上了好大学，其价值（Value）是拥有一个高品质人生，当前的奖励（Reward）是接受高品质的高等教育，下一个迭代时刻的价值（Value）是拥有一份稳定的工作和报酬。那么<strong>高品质人生 = 接受高品质的高等教育 + 稳定的工作和报酬</strong>，即当前状态跟未来之间的关系。</p>
-<p>可以把贝尔曼等式写成一种矩阵的形式：</p>
-<img src="/2021/03/19/%E8%B4%9D%E5%B0%94%E6%9B%BC%E7%AD%89%E5%BC%8F/%E8%B4%9D%E5%B0%94%E6%9B%BC%E7%9F%A9%E9%98%B5.png" class title="贝尔曼矩阵">
-<script type="math/tex; mode=display">
-V=R+\gamma PV\\(1-\gamma P)V=R\\解析解：V=(1-\gamma P)^{-1}R</script><p>我们可以通过矩阵求逆把这个 V 的这个价值直接求出来。但是一个问题是这个矩阵求逆的过程的复杂度是$O(N^3)$。所以当状态非常多的时候，比如说从十个状态到一千个状态，到一百万个状态。那么当我们有一百万个状态的时候，这个转移矩阵就会是个一百万乘以一百万的矩阵，这样一个大矩阵的话求逆是非常困难的，<strong>所以这种通过解析解去求解的方法只适用于很小量的 MRP</strong></p>
-<p><strong>Algorithm for Computing Value of a MRP</strong></p>
-<img src="/2021/03/19/%E8%B4%9D%E5%B0%94%E6%9B%BC%E7%AD%89%E5%BC%8F/%E8%92%99%E7%89%B9%E5%8D%A1%E7%BD%97.png" class title="蒙特卡罗">
-<p>比如说我们要算$s_4$状态的价值。我们可以从$s_4$状态开始，随机产生很多轨迹，就是说产生很多小船，把小船扔到这个转移矩阵里面去，然后它就会随波逐流，产生轨迹。每个轨迹都会得到一个Return，我们得到大量的 Return，比如说一百个、一千个，然后直接取一个平均，那么就可以等价于现在$s_4$这个价值，因为$s_4$的价值$V(s_4)$定义了你未来可能得到多少的奖励。这就是蒙特卡罗采样的方法。</p>
-<img src="/2021/03/19/%E8%B4%9D%E5%B0%94%E6%9B%BC%E7%AD%89%E5%BC%8F/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92.png" class title="动态规划">
-<p>一直去迭代它的 Bellman equation，让它最后收敛，我们就可以得到它的一个状态。所以在这里算法二就是一个迭代的算法，通过 bootstrapping(拔靴自助) 的办法，然后去不停地迭代这个 Bellman Equation。当这个最后更新的状态跟你上一个状态变化并不大的时候，更新就可以停止，我们就可以输出最新的$V^,(s)$作为它当前的状态。所以这里就是把 Bellman Equation 变成一个 Bellman Update，这样就可以得到它的一个价值。</p>
-<p><strong>Markov Decision Process</strong></p>
-<p>相对于MRP，马尔可夫决策过程(Markov Decision Process)多了一个decision，其它的定义跟 MRP 都是类似的。</p>
-<p>这里多了一个决策，多了一个动作。状态转移也多了一个条件，变成了 $P(s_{t+1}=s^,\mid s_t=s,a_t=a)$。你采取某一种动作，然后你未来的状态会不同。未来的状态不仅是依赖于你当前的状态，也依赖于在当前状态 agent 采取的这个动作。</p>
-<p>Ploicy in MDP</p>
-<script type="math/tex; mode=display">
-\pi(a\mid s)=P(a_t=a\mid s_t=s)</script><img src="/2021/03/19/%E8%B4%9D%E5%B0%94%E6%9B%BC%E7%AD%89%E5%BC%8F/PolicyinMDP.png" class title="PolicyinMDP">
-<p>Policy 定义了在某一个状态应该采取什么样的动作，知道当前状态过后，我们可以把当前状态带入 policy function，然后就会得到一个概率，概率就代表了在所有可能的动作里面怎样采取行动，比如可能有 0.7 的概率往左走，有 0.3 的概率往右走，这是一个概率的表示，另外这个策略也可能是确定的，它有可能是直接输出一个值。或者就直接告诉你当前应该采取什么样的动作，而不是一个动作的概率。</p>
-<p><strong>Comparison of MP/MRP and MDP</strong></p>
-
-      
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/03/19/%E8%B4%9D%E5%B0%94%E6%9B%BC%E7%AD%89%E5%BC%8F/" rel="prev" title="贝尔曼等式">
+      <i class="fa fa-chevron-left"></i> 贝尔曼等式
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
+    
   </article>
   
   
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://worldpeace.monster/2021/03/17/%E7%AC%AC%E4%B8%80%E7%AB%A0-%E6%B7%B1%E5%BA%A6%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E6%A6%82%E8%BF%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/avatar.png">
-      <meta itemprop="name" content="Author">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="冬企鹅">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/03/17/%E7%AC%AC%E4%B8%80%E7%AB%A0-%E6%B7%B1%E5%BA%A6%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E6%A6%82%E8%BF%B0/" class="post-title-link" itemprop="url">第一章 深度强化学习概述</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-03-17 22:27:40 / 修改时间：22:32:36" itemprop="dateCreated datePublished" datetime="2021-03-17T22:27:40+08:00">2021-03-17</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">深度强化学习</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2021/03/17/%E7%AC%AC%E4%B8%80%E7%AB%A0-%E6%B7%B1%E5%BA%A6%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E6%A6%82%E8%BF%B0/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2021/03/17/%E7%AC%AC%E4%B8%80%E7%AB%A0-%E6%B7%B1%E5%BA%A6%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E6%A6%82%E8%BF%B0/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <img src="/2021/03/17/%E7%AC%AC%E4%B8%80%E7%AB%A0-%E6%B7%B1%E5%BA%A6%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E6%A6%82%E8%BF%B0/%E6%B7%B1%E5%BA%A6%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0.png" class title="思维导图">
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://worldpeace.monster/2021/03/17/%E5%AF%B9%E4%BC%BC%E7%84%B6%E6%80%A7%E7%9A%84%E7%90%86%E8%A7%A3/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/avatar.png">
-      <meta itemprop="name" content="Author">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="冬企鹅">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/03/17/%E5%AF%B9%E4%BC%BC%E7%84%B6%E6%80%A7%E7%9A%84%E7%90%86%E8%A7%A3/" class="post-title-link" itemprop="url">对似然性的理解</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-03-17 18:39:32" itemprop="dateCreated datePublished" datetime="2021-03-17T18:39:32+08:00">2021-03-17</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-03-20 11:20:14" itemprop="dateModified" datetime="2021-03-20T11:20:14+08:00">2021-03-20</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">统计学习方法</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2021/03/17/%E5%AF%B9%E4%BC%BC%E7%84%B6%E6%80%A7%E7%9A%84%E7%90%86%E8%A7%A3/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2021/03/17/%E5%AF%B9%E4%BC%BC%E7%84%B6%E6%80%A7%E7%9A%84%E7%90%86%E8%A7%A3/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><strong>似然性与概率</strong></p>
-<p>例子：机器学习中已知随机变量D表示数据，随机变量$\theta$表示模型参数。</p>
-<p>先验概率$P(\theta)$：已知模型参数$\theta$，也称统计概率。</p>
-<p>似然函数$P(D|\theta)$：已知在模型参数$\theta$的条件下，数据为D的概率。</p>
-<p>后验概率$P(\theta|D)$：已知数据结果为D，求导致该结果的参数$\theta$，也称条件概率。</p>
-<p>贝叶斯公式：即三者关系</p>
-<script type="math/tex; mode=display">
-P\left( \theta \mid D \right) =\frac{P\left( \theta \right) \cdot P\left( D\mid \theta \right)}{P\left( D \right)}</script><p>预测时，计算数据对后验概率分布的期望值</p>
-<script type="math/tex; mode=display">
-P\left( x \mid D \right) =\int{P\left( x \mid \theta ,D \right) P\left( \theta \mid D \right) d\theta}</script><p><strong>极大似然估计与贝叶斯（极大后验）估计</strong></p>
-<p>极大似然估计（ML）：估计模型的参数，目的是找出一组参数$\theta$，使得模型产生出观测数据D的概率最大。</p>
-<script type="math/tex; mode=display">
-\hat{\theta}=arg\max_{\theta} P(D|\theta)</script><p>贝叶斯估计：</p>
-<script type="math/tex; mode=display">
-\hat{P}\left( \theta \mid D \right) =\frac{P\left( \theta \right) \cdot P\left( D\mid \theta \right)}{P\left( D \right)}</script><p>实际应用中可以把两者联系起来，假设先验分布式均匀分布，取后验概率最大，就能从贝叶斯估计中得到极大似然估计。</p>
-<hr>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
   
 
 
 
           </div>
           
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -749,71 +490,6 @@ P\left( x \mid D \right) =\int{P\left( x \mid \theta ,D \right) P\left( \theta \
   
 
   
-      
-
-<script>
-  if (typeof MathJax === 'undefined') {
-    // window.MathJax = {
-    //   loader: {
-    //
-    //       load: ['[tex]/mhchem'],
-    //
-    //     source: {
-    //       '[tex]/amsCd': '[tex]/amscd',
-    //       '[tex]/AMScd': '[tex]/amscd'
-    //     }
-    //   },
-    //   tex: {
-    //     inlineMath: {'[+]': [['$', '$']]},
-    //
-    //       packages: {'[+]': ['mhchem']},
-    //
-    //     tags: 'ams'
-    //   },
-    //   options: {
-    //     renderActions: {
-    //       findScript: [10, doc => {
-    //         document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-    //           const display = !!node.type.match(/; *mode=display/);
-    //           const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-    //           const text = document.createTextNode('');
-    //           node.parentNode.replaceChild(text, node);
-    //           math.start = {node: text, delim: '', n: 0};
-    //           math.end = {node: text, delim: '', n: 0};
-    //           doc.math.push(math);
-    //         });
-    //       }, '', false],
-    //       insertedScript: [200, () => {
-    //         document.querySelectorAll('mjx-container').forEach(node => {
-    //           let target = node.parentNode;
-    //           if (target.nodeName.toLowerCase() === 'li') {
-    //             target.parentNode.classList.add('has-jax');
-    //           }
-    //         });
-    //       }, '', false]
-    //     }
-    //   }
-    // };
-    window.MathJax = {
-      tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-        processEscapes: true
-      }
-    };
-    (function () {
-      var script = document.createElement('script');
-      script.src = 'https://cdn.jsdelivr.net/npm/mathjax@2.7.8/unpacked/MathJax.js?config=TeX-MML-AM_CHTML';
-      script.defer = true;
-      document.head.appendChild(script);
-    })();
-  } else {
-    MathJax.startup.document.state(0);
-    MathJax.texReset();
-    MathJax.typeset();
-  }
-</script>
-
-    
 
   
 
