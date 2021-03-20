@@ -1,6 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>对似然性的理解</title>
+    <url>/2021/03/17/%E5%AF%B9%E4%BC%BC%E7%84%B6%E6%80%A7%E7%9A%84%E7%90%86%E8%A7%A3/</url>
+    <content><![CDATA[<p><strong>似然性与概率</strong></p>
+<p>例子：机器学习中已知随机变量D表示数据，随机变量$\theta$表示模型参数。</p>
+<p>先验概率$P(\theta)$：已知模型参数$\theta$，也称统计概率。</p>
+<p>似然函数$P(D|\theta)$：已知在模型参数$\theta$的条件下，数据为D的概率。</p>
+<p>后验概率$P(\theta|D)$：已知数据结果为D，求导致该结果的参数$\theta$，也称条件概率。</p>
+<p>贝叶斯公式：即三者关系</p>
+<script type="math/tex; mode=display">
+P\left( \theta \mid D \right) =\frac{P\left( \theta \right) \cdot P\left( D\mid \theta \right)}{P\left( D \right)}</script><p>预测时，计算数据对后验概率分布的期望值</p>
+<script type="math/tex; mode=display">
+P\left( x \mid D \right) =\int{P\left( x \mid \theta ,D \right) P\left( \theta \mid D \right) d\theta}</script><p><strong>极大似然估计与贝叶斯（极大后验）估计</strong></p>
+<p>极大似然估计（ML）：估计模型的参数，目的是找出一组参数$\theta$，使得模型产生出观测数据D的概率最大。</p>
+<script type="math/tex; mode=display">
+\hat{\theta}=arg\max_{\theta} P(D|\theta)</script><p>贝叶斯估计：</p>
+<script type="math/tex; mode=display">
+\hat{P}\left( \theta \mid D \right) =\frac{P\left( \theta \right) \cdot P\left( D\mid \theta \right)}{P\left( D \right)}</script><p>实际应用中可以把两者联系起来，假设先验分布式均匀分布，取后验概率最大，就能从贝叶斯估计中得到极大似然估计。</p>
+<hr>
+]]></content>
+      <categories>
+        <category>统计学习方法</category>
+      </categories>
+      <tags>
+        <tag>第一章 统计学习及监督学习概率</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>第一章 深度强化学习概述</title>
     <url>/2021/03/17/%E7%AC%AC%E4%B8%80%E7%AB%A0-%E6%B7%B1%E5%BA%A6%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E6%A6%82%E8%BF%B0/</url>
     <content><![CDATA[<img src="/2021/03/17/%E7%AC%AC%E4%B8%80%E7%AB%A0-%E6%B7%B1%E5%BA%A6%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E6%A6%82%E8%BF%B0/%E6%B7%B1%E5%BA%A6%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0.png" class title="思维导图">]]></content>
@@ -12,22 +39,37 @@
       </tags>
   </entry>
   <entry>
-    <title>对似然性的理解</title>
-    <url>/2021/03/17/%E5%AF%B9%E4%BC%BC%E7%84%B6%E6%80%A7%E7%9A%84%E7%90%86%E8%A7%A3/</url>
-    <content><![CDATA[<p><strong>似然性与概率</strong></p>
-<p>例子：机器学习中已知随机变量D表示数据，随机变量$\theta$表示模型参数。</p>
-<p>先验概率$P(\theta)$：已知模型参数$\theta$，也称统计概率。</p>
-<p>似然函数$P(D|\theta)$：已知在模型参数$\theta$的条件下，数据为D的概率。</p>
-<p>后验概率$P(\theta|D)$：已知数据结果为D，求导致该结果的参数$\theta$，也称条件概率。</p>
-<p>贝叶斯公式：即三者关系<br>$$<br>P\left( \theta \mid D \right) =\frac{P\left( \theta \right) \cdot P\left( D\mid \theta \right)}{P\left( D \right)}<br>$$<br>预测时，计算数据对后验概率分布的期望值<br>$$<br>P\left( x \mid D \right) =\int{P\left( x \mid \theta ,D \right) P\left( \theta \mid D \right) d\theta}<br>$$<br><strong>极大似然估计与贝叶斯（极大后验）估计</strong></p>
-<p>极大似然估计（ML）：估计模型的参数，目的是找出一组参数$\theta$，使得模型产生出观测数据D的概率最大。<br>$$<br>\hat{\theta}=arg\max_{\theta} P(D|\theta)<br>$$<br>贝叶斯估计：<br>$$<br>\hat{P}\left( \theta \mid D \right) =\frac{P\left( \theta \right) \cdot P\left( D\mid \theta \right)}{P\left( D \right)}<br>$$<br>实际应用中可以把两者联系起来，假设先验分布式均匀分布，取后验概率最大，就能从贝叶斯估计中得到极大似然估计。</p>
-<hr>
+    <title>贝尔曼等式</title>
+    <url>/2021/03/19/%E8%B4%9D%E5%B0%94%E6%9B%BC%E7%AD%89%E5%BC%8F/</url>
+    <content><![CDATA[<p><strong>一些定义</strong></p>
+<p><strong>Return（回报）</strong>：把奖励进行折扣后所获得的收益。Return 可以定义为奖励的逐步叠加：</p>
+<script type="math/tex; mode=display">
+G_t=R_{t+1}+\gamma R_{t+2}+\gamma^2R_{t+3}+\gamma^3R_{t+4}...</script><p><strong>状态价值函数（state value function）</strong>:Return的期望：</p>
+<script type="math/tex; mode=display">
+V_t(s)=E[G_t\mid s_t=s]=E[R_{t+1}+\gamma R_{t+2}+\gamma^2R_{t+3}+\gamma^3R_{t+4}...\mid s_t=s]</script><p>所以这个期望也可以看成是对未来可能获得奖励的当前价值的一个表现，就是当你进入某一个状态过后，你现在就有多大的价值。</p>
+<p><strong>贝尔曼等式（Bellman Equation）</strong>：定义了当前状态跟未来状态之间的关系。</p>
+<p>由简单的数学推到可以得到：</p>
+<script type="math/tex; mode=display">
+G_t=R_{t+1}+\gamma(R_{t+2}+\gamma R_{t+3}+\gamma^2 R_{t+4}+...)</script><script type="math/tex; mode=display">
+迭代：G_t=R_{t+1}+\gamma G_{t+1}</script><p>则贝尔曼等式推到如下：</p>
+<script type="math/tex; mode=display">
+V(s)=E[G_t\mid s_t=t]\\
+=E[R_{t+1}+\gamma R_{t+2}+\gamma^2R_{t+3}+\gamma^3R_{t+4}...\mid s_t=s]\\
+=E[R_{t+1}\mid s_t=s]+\gamma E[R_{t+2}+\gamma R_{t+3}+\gamma^2 R_{t+4}+...\mid s_t=s]\\
+=E[R_{t+1}+\gamma G_{t+1}\mid s_t=s]\\
+=E[R_{t+1}+\gamma\cdot V(s_{t+1})\mid s_t=s]\\
+=R(s)+\gamma \sum_{s^,\subseteq S}P(s^,\mid s)V(s^,)</script><p>Bellman Equation 就是当前状态与未来状态的迭代关系，表示当前状态的值函数可以通过下个状态的值函数来计算。</p>
+<p>假设当前的状态是考上了好大学，其价值（Value）是拥有一个高品质人生，当前的奖励（Reward）是接受高品质的高等教育，下一个迭代时刻的价值（Value）是拥有一份稳定的工作和报酬。那么<strong>高品质人生 = 接受高品质的高等教育 + 稳定的工作和报酬</strong>，即当前状态跟未来之间的关系。</p>
+<p>可以把贝尔曼等式写成一种矩阵的形式：</p>
+<img src="/2021/03/19/%E8%B4%9D%E5%B0%94%E6%9B%BC%E7%AD%89%E5%BC%8F/%E8%B4%9D%E5%B0%94%E6%9B%BC%E7%9F%A9%E9%98%B5.png" class title="贝尔曼矩阵">
+<script type="math/tex; mode=display">
+V=R+\gamma PV\\(1-\gamma P)V=R\\解析解：V=(1-\gamma P)^{-1}R</script><p>我们可以通过矩阵求逆把这个 V 的这个价值直接求出来。但是一个问题是这个矩阵求逆的过程的复杂度是$O(N^3)$。所以当状态非常多的时候，比如说从十个状态到一千个状态，到一百万个状态。那么当我们有一百万个状态的时候，这个转移矩阵就会是个一百万乘以一百万的矩阵，这样一个大矩阵的话求逆是非常困难的，<strong>所以这种通过解析解去求解的方法只适用于很小量的 MRP</strong></p>
 ]]></content>
       <categories>
-        <category>统计学习方法</category>
+        <category>深度强化学习</category>
       </categories>
       <tags>
-        <tag>第一章 统计学习及监督学习概率</tag>
+        <tag>第二章 马尔可夫决策过程</tag>
       </tags>
   </entry>
 </search>
