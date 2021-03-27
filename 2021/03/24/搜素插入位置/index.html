@@ -20,23 +20,23 @@
     var CONFIG = {"hostname":"worldpeace.monster","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":"enable","trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="方法一 双指针，同时从数组头部出发，一快一慢，指针$j$指向数字不等于val时，$i,j$同时前进指向下一个数字，若该数字等于val时,指针$i$不动，指针$j$前进，然后判断$j$所指数字是否等于val，若不等于val，则替换$i$所指位置数字，若等于则$j$继续前进，直到$j$指向数组尾部。 123456789class Solution:    def removeElement(self">
+  <meta name="description" content="方法一 暴力解法 123456789class Solution:    def searchInsert(self, nums: List[int], target: int) -&gt; int:        n &#x3D; len(nums)        if target &gt; nums[n - 1]:            return n        for i in range(">
 <meta property="og:type" content="article">
-<meta property="og:title" content="27.移除元素">
-<meta property="og:url" content="http://worldpeace.monster/2021/03/23/%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0/index.html">
+<meta property="og:title" content="35.搜素插入位置">
+<meta property="og:url" content="http://worldpeace.monster/2021/03/24/%E6%90%9C%E7%B4%A0%E6%8F%92%E5%85%A5%E4%BD%8D%E7%BD%AE/index.html">
 <meta property="og:site_name" content="冬企鹅">
-<meta property="og:description" content="方法一 双指针，同时从数组头部出发，一快一慢，指针$j$指向数字不等于val时，$i,j$同时前进指向下一个数字，若该数字等于val时,指针$i$不动，指针$j$前进，然后判断$j$所指数字是否等于val，若不等于val，则替换$i$所指位置数字，若等于则$j$继续前进，直到$j$指向数组尾部。 123456789class Solution:    def removeElement(self">
+<meta property="og:description" content="方法一 暴力解法 123456789class Solution:    def searchInsert(self, nums: List[int], target: int) -&gt; int:        n &#x3D; len(nums)        if target &gt; nums[n - 1]:            return n        for i in range(">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://worldpeace.monster/2021/03/23/%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0/%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0.png">
-<meta property="article:published_time" content="2021-03-23T02:36:14.000Z">
-<meta property="article:modified_time" content="2021-03-26T06:37:00.449Z">
+<meta property="og:image" content="http://worldpeace.monster/2021/03/24/%E6%90%9C%E7%B4%A0%E6%8F%92%E5%85%A5%E4%BD%8D%E7%BD%AE/%E6%90%9C%E7%B4%A0%E6%8F%92%E5%85%A5%E4%BD%8D%E7%BD%AE.png">
+<meta property="article:published_time" content="2021-03-24T02:09:57.000Z">
+<meta property="article:modified_time" content="2021-03-26T06:37:03.421Z">
 <meta property="article:author" content="ink">
 <meta property="article:tag" content="array">
-<meta property="article:tag" content="双指针">
+<meta property="article:tag" content="二分法">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://worldpeace.monster/2021/03/23/%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0/%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0.png">
+<meta name="twitter:image" content="http://worldpeace.monster/2021/03/24/%E6%90%9C%E7%B4%A0%E6%8F%92%E5%85%A5%E4%BD%8D%E7%BD%AE/%E6%90%9C%E7%B4%A0%E6%8F%92%E5%85%A5%E4%BD%8D%E7%BD%AE.png">
 
-<link rel="canonical" href="http://worldpeace.monster/2021/03/23/%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0/">
+<link rel="canonical" href="http://worldpeace.monster/2021/03/24/%E6%90%9C%E7%B4%A0%E6%8F%92%E5%85%A5%E4%BD%8D%E7%BD%AE/">
 
 
 <script id="page-configurations">
@@ -49,7 +49,7 @@
   };
 </script>
 
-  <title>27.移除元素 | 冬企鹅</title>
+  <title>35.搜素插入位置 | 冬企鹅</title>
   
 
 
@@ -177,7 +177,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://worldpeace.monster/2021/03/23/%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0/">
+    <link itemprop="mainEntityOfPage" href="http://worldpeace.monster/2021/03/24/%E6%90%9C%E7%B4%A0%E6%8F%92%E5%85%A5%E4%BD%8D%E7%BD%AE/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.png">
@@ -190,7 +190,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          27.移除元素
+          35.搜素插入位置
         </h1>
 
         <div class="post-meta">
@@ -200,14 +200,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2021-03-23 10:36:14" itemprop="dateCreated datePublished" datetime="2021-03-23T10:36:14+08:00">2021-03-23</time>
+              <time title="创建时间：2021-03-24 10:09:57" itemprop="dateCreated datePublished" datetime="2021-03-24T10:09:57+08:00">2021-03-24</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-03-26 14:37:00" itemprop="dateModified" datetime="2021-03-26T14:37:00+08:00">2021-03-26</time>
+                <time title="修改时间：2021-03-26 14:37:03" itemprop="dateModified" datetime="2021-03-26T14:37:03+08:00">2021-03-26</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -228,8 +228,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2021/03/23/%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2021/03/23/%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0/" itemprop="commentCount"></span>
+    <a title="valine" href="/2021/03/24/%E6%90%9C%E7%B4%A0%E6%8F%92%E5%85%A5%E4%BD%8D%E7%BD%AE/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/03/24/%E6%90%9C%E7%B4%A0%E6%8F%92%E5%85%A5%E4%BD%8D%E7%BD%AE/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -244,17 +244,17 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <img src="/2021/03/23/%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0/%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0.png" class title="移除元素">
+        <img src="/2021/03/24/%E6%90%9C%E7%B4%A0%E6%8F%92%E5%85%A5%E4%BD%8D%E7%BD%AE/%E6%90%9C%E7%B4%A0%E6%8F%92%E5%85%A5%E4%BD%8D%E7%BD%AE.png" class title="搜素插入位置">
 <p><strong>方法一</strong></p>
-<p>双指针，同时从数组头部出发，一快一慢，指针$j$指向数字不等于val时，$i,j$同时前进指向下一个数字，若该数字等于val时,指针$i$不动，指针$j$前进，然后判断$j$所指数字是否等于val，若不等于val，则替换$i$所指位置数字，若等于则$j$继续前进，直到$j$指向数组尾部。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">removeElement</span>(<span class="params">self, nums: List[<span class="built_in">int</span>], val: <span class="built_in">int</span></span>) -&gt; int:</span></span><br><span class="line">        i = <span class="number">0</span></span><br><span class="line">        j = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(nums)):</span><br><span class="line">            <span class="keyword">if</span> nums[j] != val:</span><br><span class="line">                nums[i] = nums[j]</span><br><span class="line">                i+=<span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> i</span><br></pre></td></tr></table></figure>
-<p>时间复杂度：$O(n)$。</p>
-<p>空间复杂度：$O(1)。$</p>
+<p>暴力解法</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">searchInsert</span>(<span class="params">self, nums: List[<span class="built_in">int</span>], target: <span class="built_in">int</span></span>) -&gt; int:</span></span><br><span class="line">        n = <span class="built_in">len</span>(nums)</span><br><span class="line">        <span class="keyword">if</span> target &gt; nums[n - <span class="number">1</span>]:</span><br><span class="line">            <span class="keyword">return</span> n</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(nums)):</span><br><span class="line">            <span class="keyword">if</span> target &lt;= nums[i]:</span><br><span class="line">                <span class="keyword">return</span> i</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p><strong>方法二</strong></p>
-<p>双指针，一头一尾向中间移动直到碰撞，$i$指向头部，$j$指向尾部，$i$不等于val时向前移动，若等于val则用$nums[j]$替换掉$nums(i)$,并且j—，相当于删掉该数字，重复直到$i=j$</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">removeElement</span>(<span class="params">self, nums: List[<span class="built_in">int</span>], val: <span class="built_in">int</span></span>) -&gt; int:</span></span><br><span class="line">        i = <span class="number">0</span></span><br><span class="line">        j = <span class="built_in">len</span>(nums) - <span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span>(i &lt;= j):</span><br><span class="line">            <span class="keyword">if</span> nums[i] == val:</span><br><span class="line">                nums[i] = nums[j]</span><br><span class="line">                j-=<span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                i+=<span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> i</span><br></pre></td></tr></table></figure>
-<p>时间复杂度：$O(n)。$</p>
-<p>空间复杂度：$O(1)。$</p>
+<p>二分法</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">n = <span class="built_in">len</span>(nums)</span><br><span class="line"> <span class="keyword">if</span> target &gt; nums[n - <span class="number">1</span>]:</span><br><span class="line">     <span class="keyword">return</span> n</span><br><span class="line"> left = <span class="number">0</span></span><br><span class="line"> right = n - <span class="number">1</span></span><br><span class="line"> <span class="keyword">while</span> left &lt; right:</span><br><span class="line">     mid = (left + right) // <span class="number">2</span></span><br><span class="line">     <span class="keyword">if</span> nums[mid] &lt; target:</span><br><span class="line">         left = mid + <span class="number">1</span></span><br><span class="line">     <span class="keyword">else</span>:</span><br><span class="line">         right = mid</span><br><span class="line"> <span class="keyword">return</span> left</span><br></pre></td></tr></table></figure>
+<p>时间复杂度：$O(logn)$，其中n为数组的长度。二分查找所需的时间复杂度为$O(logn)$。</p>
+<p>空间复杂度：$O(1)$，我们只需要常数空间存放若干变量。</p>
+<p>二分法总结：</p>
+<p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/search-insert-position/solution/te-bie-hao-yong-de-er-fen-cha-fa-fa-mo-ban-python-/">https://leetcode-cn.com/problems/search-insert-position/solution/te-bie-hao-yong-de-er-fen-cha-fa-fa-mo-ban-python-/</a></p>
 
     </div>
 
@@ -270,7 +270,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://worldpeace.monster/2021/03/23/%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0/" title="27.移除元素">http://worldpeace.monster/2021/03/23/移除元素/</a>
+    <a href="http://worldpeace.monster/2021/03/24/%E6%90%9C%E7%B4%A0%E6%8F%92%E5%85%A5%E4%BD%8D%E7%BD%AE/" title="35.搜素插入位置">http://worldpeace.monster/2021/03/24/搜素插入位置/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -292,7 +292,7 @@
       <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/array/" rel="tag"># array</a>
-              <a href="/tags/%E5%8F%8C%E6%8C%87%E9%92%88/" rel="tag"># 双指针</a>
+              <a href="/tags/%E4%BA%8C%E5%88%86%E6%B3%95/" rel="tag"># 二分法</a>
           </div>
 
         
@@ -301,12 +301,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/03/22/%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E5%86%B3%E7%AD%96%E8%BF%87%E7%A8%8B/" rel="prev" title="马尔可夫决策过程">
-      <i class="fa fa-chevron-left"></i> 马尔可夫决策过程
+    <a href="/2021/03/23/%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0/" rel="prev" title="27.移除元素">
+      <i class="fa fa-chevron-left"></i> 27.移除元素
     </a></div>
       <div class="post-nav-item">
-    <a href="/2021/03/24/%E6%90%9C%E7%B4%A0%E6%8F%92%E5%85%A5%E4%BD%8D%E7%BD%AE/" rel="next" title="35.搜素插入位置">
-      35.搜素插入位置 <i class="fa fa-chevron-right"></i>
+    <a href="/2021/03/26/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/" rel="next" title="704.二分查找">
+      704.二分查找 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
