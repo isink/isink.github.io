@@ -193,7 +193,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-03-27 11:30:22 / 修改时间：11:38:32" itemprop="dateCreated datePublished" datetime="2021-03-27T11:30:22+08:00">2021-03-27</time>
+              <time title="创建时间：2021-03-27 11:30:22 / 修改时间：11:40:08" itemprop="dateCreated datePublished" datetime="2021-03-27T11:30:22+08:00">2021-03-27</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -536,153 +536,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://worldpeace.monster/2021/03/22/%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E5%86%B3%E7%AD%96%E8%BF%87%E7%A8%8B/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/avatar.png">
-      <meta itemprop="name" content="Author">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="冬企鹅">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/03/22/%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E5%86%B3%E7%AD%96%E8%BF%87%E7%A8%8B/" class="post-title-link" itemprop="url">马尔可夫决策过程</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-03-22 20:36:17" itemprop="dateCreated datePublished" datetime="2021-03-22T20:36:17+08:00">2021-03-22</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-03-26 17:33:49" itemprop="dateModified" datetime="2021-03-26T17:33:49+08:00">2021-03-26</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">深度强化学习</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2021/03/22/%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E5%86%B3%E7%AD%96%E8%BF%87%E7%A8%8B/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2021/03/22/%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E5%86%B3%E7%AD%96%E8%BF%87%E7%A8%8B/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><strong>Markov Decision Process</strong></p>
-<p>相对于MRP，马尔可夫决策过程(Markov Decision Process)多了一个decision，其它的定义跟 MRP 都是类似的。</p>
-<p>这里多了一个决策，多了一个动作。状态转移也多了一个条件，变成了 $P(s_{t+1}=s^,\mid s_t=s,a_t=a)$。你采取某一种动作，然后你未来的状态会不同。未来的状态不仅是依赖于你当前的状态，也依赖于在当前状态 agent 采取的这个动作。</p>
-<p>Ploicy in MDP</p>
-<script type="math/tex; mode=display">
-\pi(a\mid s)=P(a_t=a\mid s_t=s)</script>
-<p>Policy 定义了在某一个状态应该采取什么样的动作，知道当前状态过后，我们可以把当前状态带入 policy function，然后就会得到一个概率，概率就代表了在所有可能的动作里面怎样采取行动，比如可能有 0.7 的概率往左走，有 0.3 的概率往右走，这是一个概率的表示，另外这个策略也可能是确定的，它有可能是直接输出一个值。或者就直接告诉你当前应该采取什么样的动作，而不是一个动作的概率。</p>
-<p><strong>Comparison of MP/MRP and MDP</strong></p>
-<img src="/2021/03/22/%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E5%86%B3%E7%AD%96%E8%BF%87%E7%A8%8B/MDP%E5%92%8CMRP%E6%AF%94%E8%BE%83.png" class title="MDP和MRP比较">
-<p><strong>Value function for MDP</strong></p>
-<p>state-value function</p>
-<script type="math/tex; mode=display">
-V^\pi(s)=E_\pi[G_t\mid s_t=t]</script><p>Q-function/action-value function</p>
-<p>Q 函数定义的是在某一个状态采取某一个动作，它有可能得到的这个 return 的一个期望</p>
-<script type="math/tex; mode=display">
-q^\pi(s,a)=E_\pi[G_t\mid s_t=s,A_t=a]</script><p>对 Q 函数中的动作函数进行加和，就可以得到价值函数</p>
-<script type="math/tex; mode=display">
-v^\pi(s)=\sum_{a\subseteq A}\pi(a\mid s)q^\pi(s,a)</script><p><strong>Q-function Bellman equation</strong></p>
-<script type="math/tex; mode=display">
-q(s,a)=E[G_t\mid S_t=s,a_t=a]\\
-=E[R_{t+1}+\gamma R_{t+2}+\gamma^2R_{t+3}+...\mid s_t = s,a_t = a]\\
-=E[R_{t+1}\mid s_t=s,a_t=a]+\gamma E[R_{t+2}+\gamma R_{t+3}+\gamma^2R_{t+4}+...\mid s_t=s,a_t=a]\\
-=E(s,a)+\gamma E[V(s_{t+1})\mid s_t=s,a_t=a]\\
-=R(s,a)+\gamma \sum_{s^,\subseteq S}P(s^,\mid s,a)V(s^,)</script><p><strong>Backup Diagram</strong></p>
-<img src="/2021/03/22/%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E5%86%B3%E7%AD%96%E8%BF%87%E7%A8%8B/backupDigram.png" class title="backupDigram">
-<p>上面这样的图称为backup diagram(备份图)，因为它们图示的关系构成了更新或备份操作的基础，而这些操作是强化学习方法的核心。这些操作将价值信息从一个状态（或状态-动作对）的后继状态（或状态-动作对）转移回它。</p>
-<p>每一个空心圆圈代表一个状态，每一个实心圆圈代表一个状态-动作对。</p>
-<script type="math/tex; mode=display">
-V^\pi(s)=\sum_{a\subseteq A}\pi(a\mid s)(R(s,a)+\gamma\sum_{s^,\subseteq S}P(s^,\mid s,a)v^\pi(s^,))</script><img src="/2021/03/22/%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E5%86%B3%E7%AD%96%E8%BF%87%E7%A8%8B/%E5%8A%A0%E5%92%8C.png" class title="加和">
-<p>如图，这里有两侧加和</p>
-<p>第一层加和就是这个叶子节点，往上走一层的话，我们就可以把未来的价值($S^,$的价值) backup 到黑色的节点。</p>
-<p>第二层加和是对 action 进行加和。得到黑色节点的价值过后，再往上 backup 一层，就会推到根节点的价值，即当前状态的价值</p>
-<p><strong>Policy Evaluation(Prediction)</strong></p>
-<p>定义：计算价值函数$v^\pi(s)$的过程，有些地方也叫做prediction，预测当前采取的这个策略最终会产生多少价值。</p>
-<img src="/2021/03/22/%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E5%86%B3%E7%AD%96%E8%BF%87%E7%A8%8B/MRP%E5%92%8CMDP.png" class title="MRP和MDP">
-<p>MDP，你其实可以把它想象成一个摆渡的人在这个船上面，她可以控制这个船的移动，这样就避免了这个船随波逐流。因为在每一个时刻，这个人会决定采取什么样的一个动作，这样会把这个船进行导向。</p>
-<p>MRP 跟 MP 的话，这个纸的小船会随波逐流，然后产生轨迹。</p>
-<p>MDP 的不同就是有一个 agent 去控制这个船，这样我们就可以尽可能多地获得奖励。</p>
-<p><strong>Prediction and Contorol</strong></p>
-<p>prediction和control是MDP中的核心问题</p>
-<ul>
-<li>预测问题</li>
-</ul>
-<p>​    输入：$MDP<S,A,P,R,\gamma>和policy\ \pi或者MRP<S,P^\pi,R^\pi,\gamma>$</S,P^\pi,R^\pi,\gamma></S,A,P,R,\gamma></p>
-<p>​    输出：$value function\ v^\pi$。</p>
-<p>​    Preciction是说给定一个MDP以及一个$policy\ \pi$，去计算它的$valus\ function$，就对于每个状态，它的价值函数是多少。</p>
-<ul>
-<li><p>控制问题</p>
-<p>输入：$MDP<S,A,P,R,\gamma>$。</S,A,P,R,\gamma></p>
-<p>输出：最佳价值函数$(optimal\ value\ function)v^<em>和最佳策略(option\ policy)\pi^</em>$。</p>
-<p>Control也就是说我们去寻找一个最佳策略，然后同时输出它的最佳价值函数以及最佳策略。</p>
-</li>
-</ul>
-<p>在 MDP 里面，prediction 和 control 都可以通过动态规划去解决。</p>
-<p><strong>这两者的区别就在于</strong></p>
-<ul>
-<li>预测问题是<strong>给定一个 policy</strong>，我们要确定它的 value function 是多少。</li>
-<li>而控制问题是在<strong>没有 policy 的前提下</strong>，我们要确定最优的 value function 以及对应的决策方案。</li>
-</ul>
-<p><strong>实际上，这两者是递进的关系，在强化学习中，我们通过解决预测问题，进而解决控制问题。</strong></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://worldpeace.monster/2021/03/22/%E5%88%A0%E9%99%A4%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%87%8D%E5%A4%8D%E9%A1%B9/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -884,208 +737,6 @@ V^\pi(s)=\sum_{a\subseteq A}\pi(a\mid s)(R(s,a)+\gamma\sum_{s^,\subseteq S}P(s^,
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://worldpeace.monster/2021/03/19/%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E5%A5%96%E5%8A%B1%E8%BF%87%E7%A8%8B/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/avatar.png">
-      <meta itemprop="name" content="Author">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="冬企鹅">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/03/19/%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E5%A5%96%E5%8A%B1%E8%BF%87%E7%A8%8B/" class="post-title-link" itemprop="url">马尔可夫奖励过程</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-03-19 17:16:45" itemprop="dateCreated datePublished" datetime="2021-03-19T17:16:45+08:00">2021-03-19</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-03-22 20:50:30" itemprop="dateModified" datetime="2021-03-22T20:50:30+08:00">2021-03-22</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">深度强化学习</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2021/03/19/%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E5%A5%96%E5%8A%B1%E8%BF%87%E7%A8%8B/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2021/03/19/%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E5%A5%96%E5%8A%B1%E8%BF%87%E7%A8%8B/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><strong>Markov Reward Process</strong></p>
-<p><strong>Return（回报）</strong>：把奖励进行折扣后所获得的收益。Return 可以定义为奖励的逐步叠加：</p>
-<script type="math/tex; mode=display">
-G_t=R_{t+1}+\gamma R_{t+2}+\gamma^2R_{t+3}+\gamma^3R_{t+4}...</script><p><strong>状态价值函数（state value function）</strong>:Return的期望：</p>
-<script type="math/tex; mode=display">
-V_t(s)=E[G_t\mid s_t=s]=E[R_{t+1}+\gamma R_{t+2}+\gamma^2R_{t+3}+\gamma^3R_{t+4}...\mid s_t=s]</script><p>所以这个期望也可以看成是对未来可能获得奖励的当前价值的一个表现，就是当你进入某一个状态过后，你现在就有多大的价值。</p>
-<p><strong>贝尔曼等式（Bellman Equation）</strong>：定义了当前状态跟未来状态之间的关系。</p>
-<p>由简单的数学推到可以得到：</p>
-<script type="math/tex; mode=display">
-G_t=R_{t+1}+\gamma(R_{t+2}+\gamma R_{t+3}+\gamma^2 R_{t+4}+...)</script><script type="math/tex; mode=display">
-迭代：G_t=R_{t+1}+\gamma G_{t+1}</script><p>则贝尔曼等式推到如下：</p>
-<script type="math/tex; mode=display">
-V(s)=E[G_t\mid s_t=t]\\
-=E[R_{t+1}+\gamma R_{t+2}+\gamma^2R_{t+3}+\gamma^3R_{t+4}...\mid s_t=s]\\
-=E[R_{t+1}\mid s_t=s]+\gamma E[R_{t+2}+\gamma R_{t+3}+\gamma^2 R_{t+4}+...\mid s_t=s]\\
-=E[R_{t+1}+\gamma G_{t+1}\mid s_t=s]\\
-=E[R_{t+1}+\gamma\cdot V(s_{t+1})\mid s_t=s]\\
-=R(s)+\gamma \sum_{s^,\subseteq S}P(s^,\mid s)V(s^,)</script><p>Bellman Equation 就是当前状态与未来状态的迭代关系，表示当前状态的值函数可以通过下个状态的值函数来计算。</p>
-<p>假设当前的状态是考上了好大学，其价值（Value）是拥有一个高品质人生，当前的奖励（Reward）是接受高品质的高等教育，下一个迭代时刻的价值（Value）是拥有一份稳定的工作和报酬。那么<strong>高品质人生 = 接受高品质的高等教育 + 稳定的工作和报酬</strong>，即当前状态跟未来之间的关系。</p>
-<p>可以把贝尔曼等式写成一种矩阵的形式：</p>
-<img src="/2021/03/19/%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E5%A5%96%E5%8A%B1%E8%BF%87%E7%A8%8B/%E8%B4%9D%E5%B0%94%E6%9B%BC%E7%9F%A9%E9%98%B5.png" class title="贝尔曼矩阵">
-<script type="math/tex; mode=display">
-V=R+\gamma PV\\(1-\gamma P)V=R\\解析解：V=(1-\gamma P)^{-1}R</script><p>我们可以通过矩阵求逆把这个 V 的这个价值直接求出来。但是一个问题是这个矩阵求逆的过程的复杂度是$O(N^3)$。所以当状态非常多的时候，比如说从十个状态到一千个状态，到一百万个状态。那么当我们有一百万个状态的时候，这个转移矩阵就会是个一百万乘以一百万的矩阵，这样一个大矩阵的话求逆是非常困难的，<strong>所以这种通过解析解去求解的方法只适用于很小量的 MRP</strong></p>
-<p><strong>Algorithm for Computing Value of a MRP</strong></p>
-<img src="/2021/03/19/%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E5%A5%96%E5%8A%B1%E8%BF%87%E7%A8%8B/%E8%92%99%E7%89%B9%E5%8D%A1%E7%BD%97.png" class title="蒙特卡罗">
-<p>比如说我们要算$s_4$状态的价值。我们可以从$s_4$状态开始，随机产生很多轨迹，就是说产生很多小船，把小船扔到这个转移矩阵里面去，然后它就会随波逐流，产生轨迹。每个轨迹都会得到一个Return，我们得到大量的 Return，比如说一百个、一千个，然后直接取一个平均，那么就可以等价于现在$s_4$这个价值，因为$s_4$的价值$V(s_4)$定义了你未来可能得到多少的奖励。这就是蒙特卡罗采样的方法。</p>
-<img src="/2021/03/19/%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E5%A5%96%E5%8A%B1%E8%BF%87%E7%A8%8B/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92.png" class title="动态规划">
-<p>一直去迭代它的 Bellman equation，让它最后收敛，我们就可以得到它的一个状态。所以在这里算法二就是一个迭代的算法，通过 bootstrapping(拔靴自助) 的办法，然后去不停地迭代这个 Bellman Equation。当这个最后更新的状态跟你上一个状态变化并不大的时候，更新就可以停止，我们就可以输出最新的$V^,(s)$作为它当前的状态。所以这里就是把 Bellman Equation 变成一个 Bellman Update，这样就可以得到它的一个价值。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://worldpeace.monster/2021/03/17/%E7%AC%AC%E4%B8%80%E7%AB%A0-%E6%B7%B1%E5%BA%A6%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E6%A6%82%E8%BF%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/avatar.png">
-      <meta itemprop="name" content="Author">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="冬企鹅">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/03/17/%E7%AC%AC%E4%B8%80%E7%AB%A0-%E6%B7%B1%E5%BA%A6%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E6%A6%82%E8%BF%B0/" class="post-title-link" itemprop="url">第一章 深度强化学习概述</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-03-17 22:27:40" itemprop="dateCreated datePublished" datetime="2021-03-17T22:27:40+08:00">2021-03-17</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-03-23 00:18:26" itemprop="dateModified" datetime="2021-03-23T00:18:26+08:00">2021-03-23</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">深度强化学习</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2021/03/17/%E7%AC%AC%E4%B8%80%E7%AB%A0-%E6%B7%B1%E5%BA%A6%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E6%A6%82%E8%BF%B0/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2021/03/17/%E7%AC%AC%E4%B8%80%E7%AB%A0-%E6%B7%B1%E5%BA%A6%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E6%A6%82%E8%BF%B0/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <img src="/2021/03/17/%E7%AC%AC%E4%B8%80%E7%AB%A0-%E6%B7%B1%E5%BA%A6%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E6%A6%82%E8%BF%B0/%E6%B7%B1%E5%BA%A6%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0.png" class title="思维导图">
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://worldpeace.monster/2021/03/17/%E5%AF%B9%E4%BC%BC%E7%84%B6%E6%80%A7%E7%9A%84%E7%90%86%E8%A7%A3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1252,18 +903,18 @@ P\left( x \mid D \right) =\int{P\left( x \mid \theta ,D \right) P\left( \theta \
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-count">7</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
