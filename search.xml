@@ -68,24 +68,6 @@
       </tags>
   </entry>
   <entry>
-    <title>34.在排序数组中查找元素的第一个和最后一个位置</title>
-    <url>/2021/03/29/%E5%9C%A8%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E6%9F%A5%E6%89%BE%E5%85%83%E7%B4%A0%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%92%8C%E6%9C%80%E5%90%8E%E4%B8%80%E4%B8%AA%E4%BD%8D%E7%BD%AE/</url>
-    <content><![CDATA[<img src="/2021/03/29/%E5%9C%A8%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E6%9F%A5%E6%89%BE%E5%85%83%E7%B4%A0%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%92%8C%E6%9C%80%E5%90%8E%E4%B8%80%E4%B8%AA%E4%BD%8D%E7%BD%AE/%E9%A2%98%E7%9B%AE.png" class title="题目">
-<p><strong>二分法</strong></p>
-<p>定义两个函数分别查询元素的开始位置和结束位置，排除元素不在的区域逐渐缩小，注意点是查找结束位置时需要向上取整。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">searchRange</span>(<span class="params">self, nums: List[<span class="built_in">int</span>], target: <span class="built_in">int</span></span>) -&gt; List[int]:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">len</span>(nums) == <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> [-<span class="number">1</span>, -<span class="number">1</span>]</span><br><span class="line">        a = self.left_func(nums, target)</span><br><span class="line">        <span class="keyword">if</span> a == -<span class="number">1</span>:</span><br><span class="line">            <span class="keyword">return</span> [-<span class="number">1</span>, -<span class="number">1</span>]</span><br><span class="line">        <span class="keyword">return</span> [a, self.right_func(nums, target)]</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">left_func</span>(<span class="params">self, nums, target</span>):</span></span><br><span class="line">        n = <span class="built_in">len</span>(nums) - <span class="number">1</span></span><br><span class="line">        left = <span class="number">0</span></span><br><span class="line">        right = n</span><br><span class="line">        <span class="keyword">while</span> left &lt; right:</span><br><span class="line">            mid = (left + right) // <span class="number">2</span></span><br><span class="line">            <span class="keyword">if</span> nums[mid] &lt; target:</span><br><span class="line">                left = mid + <span class="number">1</span></span><br><span class="line">            <span class="keyword">elif</span> nums[mid] == target:</span><br><span class="line">                right = mid</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                right = mid - <span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> nums[left] == target:</span><br><span class="line">            <span class="keyword">return</span> left</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">return</span> -<span class="number">1</span></span><br><span class="line">        </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">right_func</span>(<span class="params">self, nums, target</span>):</span></span><br><span class="line">        n = <span class="built_in">len</span>(nums) - <span class="number">1</span></span><br><span class="line">        left = <span class="number">0</span></span><br><span class="line">        right = n</span><br><span class="line">        <span class="keyword">while</span> left &lt; right:</span><br><span class="line">            mid = (left + right + <span class="number">1</span>) // <span class="number">2</span>  //这里是为了让例[<span class="number">5</span>,<span class="number">7</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">8</span>,<span class="number">10</span>]不陷入循环从而向上取整</span><br><span class="line">            <span class="keyword">if</span> nums[mid] &lt; target:</span><br><span class="line">                left = mid + <span class="number">1</span></span><br><span class="line">            <span class="keyword">elif</span> nums[mid] == target:</span><br><span class="line">                left = mid</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                right = mid - <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> left</span><br></pre></td></tr></table></figure>
-<p>时间复杂度：$O(log\ n)$。</p>
-<p>空间复杂度：$O(1)$。</p>
-]]></content>
-      <categories>
-        <category>Leetcode</category>
-      </categories>
-      <tags>
-        <tag>array</tag>
-        <tag>二分法</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>对似然性的理解</title>
     <url>/2021/03/17/%E5%AF%B9%E4%BC%BC%E7%84%B6%E6%80%A7%E7%9A%84%E7%90%86%E8%A7%A3/</url>
     <content><![CDATA[<p><strong>似然性与概率</strong></p>
@@ -110,6 +92,24 @@ P\left( x \mid D \right) =\int{P\left( x \mid \theta ,D \right) P\left( \theta \
       </categories>
       <tags>
         <tag>第一章 统计学习及监督学习概率</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>34.在排序数组中查找元素的第一个和最后一个位置</title>
+    <url>/2021/03/29/%E5%9C%A8%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E6%9F%A5%E6%89%BE%E5%85%83%E7%B4%A0%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%92%8C%E6%9C%80%E5%90%8E%E4%B8%80%E4%B8%AA%E4%BD%8D%E7%BD%AE/</url>
+    <content><![CDATA[<img src="/2021/03/29/%E5%9C%A8%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E6%9F%A5%E6%89%BE%E5%85%83%E7%B4%A0%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%92%8C%E6%9C%80%E5%90%8E%E4%B8%80%E4%B8%AA%E4%BD%8D%E7%BD%AE/%E9%A2%98%E7%9B%AE.png" class title="题目">
+<p><strong>二分法</strong></p>
+<p>定义两个函数分别查询元素的开始位置和结束位置，排除元素不在的区域逐渐缩小，注意点是查找结束位置时需要向上取整。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">searchRange</span>(<span class="params">self, nums: List[<span class="built_in">int</span>], target: <span class="built_in">int</span></span>) -&gt; List[int]:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">len</span>(nums) == <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> [-<span class="number">1</span>, -<span class="number">1</span>]</span><br><span class="line">        a = self.left_func(nums, target)</span><br><span class="line">        <span class="keyword">if</span> a == -<span class="number">1</span>:</span><br><span class="line">            <span class="keyword">return</span> [-<span class="number">1</span>, -<span class="number">1</span>]</span><br><span class="line">        <span class="keyword">return</span> [a, self.right_func(nums, target)]</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">left_func</span>(<span class="params">self, nums, target</span>):</span></span><br><span class="line">        n = <span class="built_in">len</span>(nums) - <span class="number">1</span></span><br><span class="line">        left = <span class="number">0</span></span><br><span class="line">        right = n</span><br><span class="line">        <span class="keyword">while</span> left &lt; right:</span><br><span class="line">            mid = (left + right) // <span class="number">2</span></span><br><span class="line">            <span class="keyword">if</span> nums[mid] &lt; target:</span><br><span class="line">                left = mid + <span class="number">1</span></span><br><span class="line">            <span class="keyword">elif</span> nums[mid] == target:</span><br><span class="line">                right = mid</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                right = mid - <span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> nums[left] == target:</span><br><span class="line">            <span class="keyword">return</span> left</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">return</span> -<span class="number">1</span></span><br><span class="line">        </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">right_func</span>(<span class="params">self, nums, target</span>):</span></span><br><span class="line">        n = <span class="built_in">len</span>(nums) - <span class="number">1</span></span><br><span class="line">        left = <span class="number">0</span></span><br><span class="line">        right = n</span><br><span class="line">        <span class="keyword">while</span> left &lt; right:</span><br><span class="line">            mid = (left + right + <span class="number">1</span>) // <span class="number">2</span>  //这里是为了让例[<span class="number">5</span>,<span class="number">7</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">8</span>,<span class="number">10</span>]不陷入循环从而向上取整</span><br><span class="line">            <span class="keyword">if</span> nums[mid] &lt; target:</span><br><span class="line">                left = mid + <span class="number">1</span></span><br><span class="line">            <span class="keyword">elif</span> nums[mid] == target:</span><br><span class="line">                left = mid</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                right = mid - <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> left</span><br></pre></td></tr></table></figure>
+<p>时间复杂度：$O(log\ n)$。</p>
+<p>空间复杂度：$O(1)$。</p>
+]]></content>
+      <categories>
+        <category>Leetcode</category>
+      </categories>
+      <tags>
+        <tag>array</tag>
+        <tag>二分法</tag>
       </tags>
   </entry>
   <entry>
@@ -144,6 +144,23 @@ P\left( x \mid D \right) =\int{P\left( x \mid \theta ,D \right) P\left( \theta \
 <p>空间复杂度：$O(1)$，我们只需要常数空间存放若干变量。</p>
 <p>二分法总结：</p>
 <p><a href="https://leetcode-cn.com/problems/search-insert-position/solution/te-bie-hao-yong-de-er-fen-cha-fa-fa-mo-ban-python-/">https://leetcode-cn.com/problems/search-insert-position/solution/te-bie-hao-yong-de-er-fen-cha-fa-fa-mo-ban-python-/</a></p>
+]]></content>
+      <categories>
+        <category>Leetcode</category>
+      </categories>
+      <tags>
+        <tag>array</tag>
+        <tag>二分法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>81.搜素旋转排序数组Ⅱ</title>
+    <url>/2021/04/06/%E6%90%9C%E7%B4%A0%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E2%85%A1/</url>
+    <content><![CDATA[<img src="/2021/04/06/%E6%90%9C%E7%B4%A0%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E2%85%A1/%E9%A2%98%E7%9B%AE.png" class title="题目">
+<p>数组中有重复元素会导致无法判断target在左区间还是右区间，解法与33题的区别在于如果$nums[left] == nums[mid]$的话$left++$，$continue$重新判断，防止它们相等。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">search</span>(<span class="params">self, nums: List[<span class="built_in">int</span>], target: <span class="built_in">int</span></span>) -&gt; bool:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> nums:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">        n = <span class="built_in">len</span>(nums)</span><br><span class="line">        left = <span class="number">0</span></span><br><span class="line">        right = n - <span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> left &lt; right:</span><br><span class="line">            mid = (left + right) // <span class="number">2</span></span><br><span class="line">            <span class="keyword">if</span> nums[mid] == target:</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">            <span class="keyword">if</span> nums[left] == nums[mid]:</span><br><span class="line">                left+=<span class="number">1</span></span><br><span class="line">                <span class="keyword">continue</span></span><br><span class="line">            <span class="keyword">if</span> nums[left] &gt; nums[mid]:</span><br><span class="line">                <span class="keyword">if</span>  nums[mid] &lt; target &lt;= nums[n - <span class="number">1</span>]:</span><br><span class="line">                    left = mid + <span class="number">1</span></span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    right = mid - <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>: <span class="comment"># nums[0] &lt;= nums[mid]</span></span><br><span class="line">                <span class="keyword">if</span> nums[left] &lt;= target &lt; nums[mid]:</span><br><span class="line">                    right = mid - <span class="number">1</span></span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    left = mid + <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> nums[left] == target:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">False</span></span><br></pre></td></tr></table></figure>
+<p>时间复杂度：$O(N) + O(log \ N) = O(N)$。</p>
+<p>空间复杂度：$O(1)$。</p>
 ]]></content>
       <categories>
         <category>Leetcode</category>

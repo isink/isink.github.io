@@ -20,23 +20,23 @@
     var CONFIG = {"hostname":"worldpeace.monster","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":"enable","trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="二分法 找到arr[mid] &lt; arr[mid + 1]即可 1234567891011class Solution:    def peakIndexInMountainArray(self, arr: List[int]) -&gt; int:        left &#x3D; 0        right &#x3D; len(arr) - 1        while left &lt; rig">
+  <meta name="description" content="数组中有重复元素会导致无法判断target在左区间还是右区间，解法与33题的区别在于如果$nums[left] &#x3D;&#x3D; nums[mid]$的话$left++$，$continue$重新判断，防止它们相等。 12345678910111213141516171819202122232425262728class Solution:    def search(self, nums: List[in">
 <meta property="og:type" content="article">
-<meta property="og:title" content="852.山脉数组的峰顶索引">
-<meta property="og:url" content="http://worldpeace.monster/2021/03/27/%E5%B1%B1%E8%84%89%E6%95%B0%E7%BB%84%E7%9A%84%E5%B3%B0%E9%A1%B6%E7%B4%A2%E5%BC%95/index.html">
+<meta property="og:title" content="81.搜素旋转排序数组Ⅱ">
+<meta property="og:url" content="http://worldpeace.monster/2021/04/06/%E6%90%9C%E7%B4%A0%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E2%85%A1/index.html">
 <meta property="og:site_name" content="冬企鹅">
-<meta property="og:description" content="二分法 找到arr[mid] &lt; arr[mid + 1]即可 1234567891011class Solution:    def peakIndexInMountainArray(self, arr: List[int]) -&gt; int:        left &#x3D; 0        right &#x3D; len(arr) - 1        while left &lt; rig">
+<meta property="og:description" content="数组中有重复元素会导致无法判断target在左区间还是右区间，解法与33题的区别在于如果$nums[left] &#x3D;&#x3D; nums[mid]$的话$left++$，$continue$重新判断，防止它们相等。 12345678910111213141516171819202122232425262728class Solution:    def search(self, nums: List[in">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://worldpeace.monster/2021/03/27/%E5%B1%B1%E8%84%89%E6%95%B0%E7%BB%84%E7%9A%84%E5%B3%B0%E9%A1%B6%E7%B4%A2%E5%BC%95/%E5%B1%B1%E8%84%89%E6%95%B0%E7%BB%84%E7%9A%84%E5%B3%B0%E9%A1%B6%E7%B4%A2%E5%BC%95.png">
-<meta property="article:published_time" content="2021-03-27T03:30:22.000Z">
-<meta property="article:modified_time" content="2021-03-29T01:50:35.506Z">
+<meta property="og:image" content="http://worldpeace.monster/2021/04/06/%E6%90%9C%E7%B4%A0%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E2%85%A1/%E9%A2%98%E7%9B%AE.png">
+<meta property="article:published_time" content="2021-04-06T02:33:32.000Z">
+<meta property="article:modified_time" content="2021-04-06T04:03:35.408Z">
 <meta property="article:author" content="ink">
 <meta property="article:tag" content="array">
 <meta property="article:tag" content="二分法">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://worldpeace.monster/2021/03/27/%E5%B1%B1%E8%84%89%E6%95%B0%E7%BB%84%E7%9A%84%E5%B3%B0%E9%A1%B6%E7%B4%A2%E5%BC%95/%E5%B1%B1%E8%84%89%E6%95%B0%E7%BB%84%E7%9A%84%E5%B3%B0%E9%A1%B6%E7%B4%A2%E5%BC%95.png">
+<meta name="twitter:image" content="http://worldpeace.monster/2021/04/06/%E6%90%9C%E7%B4%A0%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E2%85%A1/%E9%A2%98%E7%9B%AE.png">
 
-<link rel="canonical" href="http://worldpeace.monster/2021/03/27/%E5%B1%B1%E8%84%89%E6%95%B0%E7%BB%84%E7%9A%84%E5%B3%B0%E9%A1%B6%E7%B4%A2%E5%BC%95/">
+<link rel="canonical" href="http://worldpeace.monster/2021/04/06/%E6%90%9C%E7%B4%A0%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E2%85%A1/">
 
 
 <script id="page-configurations">
@@ -49,7 +49,7 @@
   };
 </script>
 
-  <title>852.山脉数组的峰顶索引 | 冬企鹅</title>
+  <title>81.搜素旋转排序数组Ⅱ | 冬企鹅</title>
   
 
 
@@ -177,7 +177,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://worldpeace.monster/2021/03/27/%E5%B1%B1%E8%84%89%E6%95%B0%E7%BB%84%E7%9A%84%E5%B3%B0%E9%A1%B6%E7%B4%A2%E5%BC%95/">
+    <link itemprop="mainEntityOfPage" href="http://worldpeace.monster/2021/04/06/%E6%90%9C%E7%B4%A0%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E2%85%A1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.png">
@@ -190,7 +190,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          852.山脉数组的峰顶索引
+          81.搜素旋转排序数组Ⅱ
         </h1>
 
         <div class="post-meta">
@@ -199,16 +199,10 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2021-03-27 11:30:22" itemprop="dateCreated datePublished" datetime="2021-03-27T11:30:22+08:00">2021-03-27</time>
+              <time title="创建时间：2021-04-06 10:33:32 / 修改时间：12:03:35" itemprop="dateCreated datePublished" datetime="2021-04-06T10:33:32+08:00">2021-04-06</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-03-29 09:50:35" itemprop="dateModified" datetime="2021-03-29T09:50:35+08:00">2021-03-29</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -228,8 +222,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2021/03/27/%E5%B1%B1%E8%84%89%E6%95%B0%E7%BB%84%E7%9A%84%E5%B3%B0%E9%A1%B6%E7%B4%A2%E5%BC%95/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2021/03/27/%E5%B1%B1%E8%84%89%E6%95%B0%E7%BB%84%E7%9A%84%E5%B3%B0%E9%A1%B6%E7%B4%A2%E5%BC%95/" itemprop="commentCount"></span>
+    <a title="valine" href="/2021/04/06/%E6%90%9C%E7%B4%A0%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E2%85%A1/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/04/06/%E6%90%9C%E7%B4%A0%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E2%85%A1/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -244,11 +238,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <img src="/2021/03/27/%E5%B1%B1%E8%84%89%E6%95%B0%E7%BB%84%E7%9A%84%E5%B3%B0%E9%A1%B6%E7%B4%A2%E5%BC%95/%E5%B1%B1%E8%84%89%E6%95%B0%E7%BB%84%E7%9A%84%E5%B3%B0%E9%A1%B6%E7%B4%A2%E5%BC%95.png" class title="山脉数组的峰顶索引">
-<p><strong>二分法</strong></p>
-<p>找到arr[mid] &lt; arr[mid + 1]即可</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">peakIndexInMountainArray</span>(<span class="params">self, arr: List[<span class="built_in">int</span>]</span>) -&gt; int:</span></span><br><span class="line">        left = <span class="number">0</span></span><br><span class="line">        right = <span class="built_in">len</span>(arr) - <span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> left &lt; right:</span><br><span class="line">            mid = (left + right) // <span class="number">2</span></span><br><span class="line">            <span class="keyword">if</span> arr[mid] &gt; arr[mid + <span class="number">1</span>]:</span><br><span class="line">                right = mid</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                left = mid + <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> left</span><br></pre></td></tr></table></figure>
-<p>时间复杂度：$O(log\ n)$，$n$是数组的长度。</p>
+        <img src="/2021/04/06/%E6%90%9C%E7%B4%A0%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E2%85%A1/%E9%A2%98%E7%9B%AE.png" class title="题目">
+<p>数组中有重复元素会导致无法判断target在左区间还是右区间，解法与33题的区别在于如果$nums[left] == nums[mid]$的话$left++$，$continue$重新判断，防止它们相等。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">search</span>(<span class="params">self, nums: List[<span class="built_in">int</span>], target: <span class="built_in">int</span></span>) -&gt; bool:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> nums:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">        n = <span class="built_in">len</span>(nums)</span><br><span class="line">        left = <span class="number">0</span></span><br><span class="line">        right = n - <span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> left &lt; right:</span><br><span class="line">            mid = (left + right) // <span class="number">2</span></span><br><span class="line">            <span class="keyword">if</span> nums[mid] == target:</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">            <span class="keyword">if</span> nums[left] == nums[mid]:</span><br><span class="line">                left+=<span class="number">1</span></span><br><span class="line">                <span class="keyword">continue</span></span><br><span class="line">            <span class="keyword">if</span> nums[left] &gt; nums[mid]:</span><br><span class="line">                <span class="keyword">if</span>  nums[mid] &lt; target &lt;= nums[n - <span class="number">1</span>]:</span><br><span class="line">                    left = mid + <span class="number">1</span></span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    right = mid - <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>: <span class="comment"># nums[0] &lt;= nums[mid]</span></span><br><span class="line">                <span class="keyword">if</span> nums[left] &lt;= target &lt; nums[mid]:</span><br><span class="line">                    right = mid - <span class="number">1</span></span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    left = mid + <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> nums[left] == target:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">False</span></span><br></pre></td></tr></table></figure>
+<p>时间复杂度：$O(N) + O(log \ N) = O(N)$。</p>
 <p>空间复杂度：$O(1)$。</p>
 
     </div>
@@ -265,7 +258,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://worldpeace.monster/2021/03/27/%E5%B1%B1%E8%84%89%E6%95%B0%E7%BB%84%E7%9A%84%E5%B3%B0%E9%A1%B6%E7%B4%A2%E5%BC%95/" title="852.山脉数组的峰顶索引">http://worldpeace.monster/2021/03/27/山脉数组的峰顶索引/</a>
+    <a href="http://worldpeace.monster/2021/04/06/%E6%90%9C%E7%B4%A0%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E2%85%A1/" title="81.搜素旋转排序数组Ⅱ">http://worldpeace.monster/2021/04/06/搜素旋转排序数组Ⅱ/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -296,13 +289,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/03/26/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/" rel="prev" title="704.二分查找">
-      <i class="fa fa-chevron-left"></i> 704.二分查找
+    <a href="/2021/03/31/%E6%90%9C%E7%B4%A2%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84/" rel="prev" title="33.搜索旋转排序数组">
+      <i class="fa fa-chevron-left"></i> 33.搜索旋转排序数组
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2021/03/29/%E5%9C%A8%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E6%9F%A5%E6%89%BE%E5%85%83%E7%B4%A0%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%92%8C%E6%9C%80%E5%90%8E%E4%B8%80%E4%B8%AA%E4%BD%8D%E7%BD%AE/" rel="next" title="34.在排序数组中查找元素的第一个和最后一个位置">
-      34.在排序数组中查找元素的第一个和最后一个位置 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
